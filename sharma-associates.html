@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sharma & Associates — Advocates & Legal Consultants</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;font-size:15px;line-height:1.7;color:#1a1a1a;background:#fff}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit;cursor:pointer}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:500;line-height:1.2}
+h1{font-size:clamp(26px,3.5vw,40px)}
+h2{font-size:clamp(20px,2.8vw,28px)}
+h3{font-size:17px}
+p{color:#4a4a4a;line-height:1.8}
+
+:root{
+  --saffron:#d4500a;
+  --saffron-light:#fdf0e8;
+  --saffron-mid:#e8650f;
+  --navy:#0f2c52;
+  --navy-mid:#1a3d70;
+  --cream:#faf8f4;
+  --border:#e2ddd6;
+  --gold:#c49a2a;
+  --gold-light:#fdf6e3;
+  --text:#1a1a1a;
+  --muted:#666;
+  --white:#fff;
+}
+
+.container{max-width:1100px;margin:0 auto;padding:0 2rem}
+.section{padding:5rem 0}
+.section-sm{padding:3rem 0}
+.section-label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;color:var(--saffron);margin-bottom:.6rem;font-family:'Inter',sans-serif}
+.section-head{margin-bottom:2.5rem}
+.section-head h2{margin-bottom:.6rem;color:var(--navy)}
+.section-head p{color:var(--muted);max-width:540px;font-size:14px}
+.divider{height:1px;background:var(--border)}
+.bg-cream{background:var(--cream)}
+
+.btn{display:inline-block;padding:11px 26px;font-size:13px;font-weight:500;letter-spacing:.05em;border-radius:2px;transition:.2s;border:none}
+.btn-primary{background:var(--saffron);color:#fff}
+.btn-primary:hover{background:var(--saffron-mid)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-mid)}
+.btn-outline{background:transparent;color:var(--navy);border:1.5px solid var(--navy)}
+.btn-outline:hover{background:var(--navy);color:#fff}
+.btn-outline-white{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.45)}
+.btn-outline-white:hover{background:rgba(255,255,255,.1)}
+
+/* ── TOP BAR ── */
+.topbar{background:var(--navy);padding:8px 0}
+.topbar-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}
+.topbar-item{display:flex;align-items:center;gap:6px;font-size:12px;color:rgba(255,255,255,.65)}
+.topbar-item svg{opacity:.7;flex-shrink:0}
+.topbar-divider{width:1px;height:14px;background:rgba(255,255,255,.2)}
+.topbar-left{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap}
+
+/* ── NAV ── */
+nav{background:#fff;border-bottom:2px solid var(--saffron);position:sticky;top:0;z-index:100}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand-wrap{display:flex;flex-direction:column;line-height:1.1}
+.brand-name{font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:var(--navy);letter-spacing:-.2px}
+.brand-name span{color:var(--saffron)}
+.brand-tagline{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.navlinks{display:flex;list-style:none}
+.navlinks li a{display:block;padding:0 15px;height:68px;line-height:68px;font-size:13px;color:var(--muted);border-bottom:3px solid transparent;transition:.15s;letter-spacing:.02em;cursor:pointer}
+.navlinks li a:hover,.navlinks li a.active{color:var(--navy);border-bottom-color:var(--saffron)}
+.nav-cta{padding:10px 22px;background:var(--saffron);color:#fff;border:none;border-radius:2px;font-size:13px;font-weight:500;letter-spacing:.04em;transition:.2s}
+.nav-cta:hover{background:var(--saffron-mid)}
+
+/* PAGE SYSTEM */
+.page{display:none}
+.page.active{display:block}
+
+/* ── HERO ── */
+.hero{background:var(--navy);padding:5.5rem 0 4.5rem;position:relative;overflow:hidden}
+.hero-accent{position:absolute;top:0;right:0;width:380px;height:100%;background:rgba(212,80,10,.07);clip-path:polygon(15% 0,100% 0,100% 100%,0% 100%);pointer-events:none}
+.hero-border{position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--saffron)}
+.hero-inner{display:grid;grid-template-columns:1fr 260px;gap:3.5rem;align-items:center;position:relative;z-index:1}
+.hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem}
+.hero-eyebrow .dash{width:28px;height:2px;background:var(--saffron)}
+.hero-eyebrow span{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.hero h1{color:#fff;margin-bottom:1rem;font-size:clamp(26px,3.2vw,42px);font-weight:500}
+.hero h1 .accent{color:var(--saffron)}
+.hero-sub{color:rgba(255,255,255,.6);font-size:14px;margin-bottom:2rem;max-width:440px;line-height:1.85}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+
+.atty-panel{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-top:3px solid var(--saffron);border-radius:3px;padding:1.75rem}
+.atty-init{width:58px;height:58px;border-radius:50%;background:var(--saffron);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:#fff;margin-bottom:1rem}
+.atty-panel h3{font-size:15px;color:#fff;margin-bottom:1px;font-family:'Playfair Display',serif}
+.atty-deg{font-size:11px;color:rgba(255,255,255,.45);margin-bottom:4px}
+.atty-title{font-size:12px;color:var(--saffron);margin-bottom:1.25rem;letter-spacing:.03em}
+.atty-rule{height:1px;background:rgba(255,255,255,.08);margin-bottom:1.25rem}
+.atty-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.a-stat{text-align:center}
+.a-stat .n{font-family:'Playfair Display',serif;font-size:20px;font-weight:500;color:var(--saffron)}
+.a-stat .l{font-size:10px;color:rgba(255,255,255,.4);margin-top:1px;letter-spacing:.04em}
+.verified{display:flex;align-items:center;gap:5px;font-size:11px;color:rgba(255,255,255,.4);margin-top:1.1rem}
+.verified-dot{width:6px;height:6px;border-radius:50%;background:#4caf50;flex-shrink:0}
+
+/* TRUST BAR */
+.trust-bar{background:var(--saffron-light);border-bottom:1px solid #f0d5c4;padding:1rem 0}
+.trust-inner{display:flex;justify-content:space-around;flex-wrap:wrap;gap:1rem}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:13px;color:#7a3410}
+.trust-item svg{color:var(--saffron);flex-shrink:0}
+
+/* PRACTICE GRID */
+.practice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:4px;overflow:hidden}
+.pcard{background:#fff;padding:1.5rem;cursor:pointer;transition:.18s}
+.pcard:hover{background:var(--saffron-light)}
+.pcard:hover .pcard-icon{background:var(--saffron);border-color:var(--saffron)}
+.pcard:hover .pcard-icon svg{color:#fff}
+.pcard-icon{width:42px;height:42px;border-radius:3px;background:var(--cream);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;transition:.18s}
+.pcard-icon svg{color:var(--navy)}
+.pcard h4{font-size:14px;font-weight:500;color:var(--navy);margin-bottom:5px;font-family:'Playfair Display',serif}
+.pcard p{font-size:12px;color:var(--muted);line-height:1.55}
+
+/* PROCESS */
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);background:var(--border);gap:1px;border:1px solid var(--border);border-radius:4px;overflow:hidden}
+.proc-step{background:#fff;padding:1.75rem 1.25rem}
+.proc-num{font-family:'Playfair Display',serif;font-size:38px;font-weight:600;color:var(--saffron-light);margin-bottom:.5rem;line-height:1}
+.proc-step h4{font-size:14px;font-weight:500;color:var(--navy);margin-bottom:.4rem}
+.proc-step p{font-size:12px;color:var(--muted);line-height:1.6}
+
+/* TESTIMONIALS */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.tcard{border:1px solid var(--border);border-top:3px solid var(--saffron);border-radius:3px;padding:1.5rem;background:#fff}
+.stars{color:var(--gold);font-size:13px;letter-spacing:2px;margin-bottom:.75rem}
+.tcard blockquote{font-size:13px;color:var(--muted);line-height:1.75;margin-bottom:1rem;font-style:italic}
+.tcard .client-name{font-size:13px;font-weight:500;color:var(--navy);font-family:'Playfair Display',serif}
+.tcard .client-role{font-size:11px;color:var(--muted)}
+
+/* CTA BAND */
+.cta-band{background:var(--navy);padding:4rem 0;text-align:center;position:relative;overflow:hidden}
+.cta-band::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:600px;height:3px;background:var(--saffron)}
+.cta-band h2{color:#fff;margin-bottom:.75rem}
+.cta-band p{color:rgba(255,255,255,.55);margin-bottom:2rem;font-size:14px}
+.btn-row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+
+/* ── ABOUT ── */
+.page-hero{background:var(--cream);border-bottom:1px solid var(--border);padding:3.5rem 0;position:relative}
+.page-hero::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:3px;background:var(--saffron)}
+.page-hero h1{color:var(--navy);margin-bottom:.75rem}
+.page-hero p{color:var(--muted);max-width:580px;font-size:14px}
+
+.about-grid{display:grid;grid-template-columns:1fr 280px;gap:3.5rem;align-items:start}
+.about-text h2{color:var(--navy);margin-bottom:.75rem}
+.about-text p{font-size:14px;color:var(--muted);margin-bottom:1rem;line-height:1.85}
+.sidebar-facts{display:flex;flex-direction:column;gap:10px}
+.fact-chip{border:1px solid var(--border);border-left:3px solid var(--saffron);border-radius:2px;padding:1rem 1.25rem;background:#fff}
+.fact-chip .fn{font-family:'Playfair Display',serif;font-size:26px;font-weight:500;color:var(--navy)}
+.fact-chip .fl{font-size:12px;color:var(--muted);margin-top:2px}
+
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+.team-card{border:1px solid var(--border);border-radius:3px;padding:1.5rem;background:#fff;text-align:center}
+.team-avatar{width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:600;margin:0 auto 1rem;font-family:'Playfair Display',serif}
+.av-saffron{background:var(--saffron-light);color:var(--saffron)}
+.av-navy{background:#e5eaf2;color:var(--navy)}
+.av-green{background:#e5f2ea;color:#1a5e30}
+.av-gold{background:var(--gold-light);color:#7a5a10}
+.team-card h4{font-size:14px;font-weight:500;color:var(--navy);margin-bottom:2px;font-family:'Playfair Display',serif}
+.team-card .t-role{font-size:12px;color:var(--muted);margin-bottom:10px}
+.t-badge{display:inline-block;font-size:11px;padding:3px 12px;border-radius:99px;background:var(--saffron-light);border:1px solid #f0c4a8;color:var(--saffron)}
+
+.values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+.vcard{padding:1.5rem;border:1px solid var(--border);border-radius:3px;background:#fff}
+.v-icon{width:36px;height:36px;border-radius:3px;background:var(--saffron-light);display:flex;align-items:center;justify-content:center;margin-bottom:1rem}
+.v-icon svg{color:var(--saffron)}
+.vcard h4{font-size:13px;font-weight:500;color:var(--navy);margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.06em}
+.vcard p{font-size:12px;color:var(--muted);line-height:1.6}
+
+.timeline{border-left:2px solid var(--border);padding-left:2rem;display:flex;flex-direction:column;gap:2rem}
+.tl-item{position:relative}
+.tl-item::before{content:'';position:absolute;left:-2.45rem;top:5px;width:10px;height:10px;border-radius:50%;background:var(--saffron);border:2px solid #fff;outline:2px solid var(--saffron)}
+.tl-year{font-size:11px;font-weight:500;color:var(--saffron);letter-spacing:.08em;margin-bottom:3px;text-transform:uppercase}
+.tl-item h4{font-size:14px;font-weight:500;color:var(--navy);margin-bottom:3px}
+.tl-item p{font-size:13px;color:var(--muted);line-height:1.6}
+
+/* ── PRACTICE AREAS ── */
+.area-list{display:flex;flex-direction:column}
+.area-row{display:grid;grid-template-columns:60px 1fr;gap:1.5rem;align-items:start;padding:2rem 0;border-bottom:1px solid var(--border)}
+.area-row:first-child{padding-top:0}
+.area-row:last-child{border-bottom:none}
+.area-icon{width:50px;height:50px;border-radius:3px;background:var(--saffron-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid #f0c4a8}
+.area-icon svg{color:var(--saffron)}
+.area-row h3{font-size:16px;color:var(--navy);margin-bottom:.4rem}
+.area-desc{font-size:13px;color:var(--muted);line-height:1.75;margin-bottom:.75rem}
+.tag-row{display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:11px;padding:3px 12px;background:var(--cream);border:1px solid var(--border);border-radius:99px;color:var(--muted)}
+
+/* ── RESULTS ── */
+.results-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-bottom:3rem}
+.r-stat{border:1px solid var(--border);border-top:3px solid var(--saffron);border-radius:2px;padding:1.5rem;text-align:center;background:#fff}
+.r-stat .rn{font-family:'Playfair Display',serif;font-size:30px;font-weight:500;color:var(--navy)}
+.r-stat .rl{font-size:12px;color:var(--muted);margin-top:4px}
+
+.case-list{display:flex;flex-direction:column;gap:1rem}
+.case-card{border:1px solid var(--border);border-radius:3px;padding:1.5rem;background:#fff;display:grid;grid-template-columns:1fr 160px;gap:1.5rem;align-items:start}
+.case-card h4{font-size:14px;font-weight:500;color:var(--navy);margin-bottom:.35rem;font-family:'Playfair Display',serif}
+.case-card p{font-size:13px;color:var(--muted);line-height:1.65}
+.case-tag{display:inline-block;font-size:11px;padding:3px 10px;border-radius:99px;background:var(--saffron-light);border:1px solid #f0c4a8;color:var(--saffron);margin-bottom:.75rem}
+.outcome-box{border-left:1px solid var(--border);padding-left:1.5rem;text-align:center}
+.out-label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:6px}
+.out-val{font-family:'Playfair Display',serif;font-size:19px;color:var(--navy);font-weight:500;margin-bottom:6px}
+.out-badge{display:inline-block;font-size:11px;padding:4px 12px;border-radius:99px;background:#eaf3e8;border:1px solid #c6dfc3;color:#2a6b25}
+
+/* ── CONTACT ── */
+.contact-layout{display:grid;grid-template-columns:1fr 1.1fr;gap:3.5rem;align-items:start}
+.contact-info h2{color:var(--navy);margin-bottom:.75rem}
+.contact-info .intro{font-size:13px;color:var(--muted);line-height:1.85;margin-bottom:2rem}
+.info-rows{display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem}
+.info-row{display:flex;align-items:flex-start;gap:12px}
+.info-row-icon{width:36px;height:36px;border-radius:3px;background:var(--saffron-light);border:1px solid #f0c4a8;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.info-row-icon svg{color:var(--saffron)}
+.info-row .val{font-size:14px;font-weight:500;color:var(--navy)}
+.info-row .lbl{font-size:12px;color:var(--muted)}
+.hours-label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;color:var(--muted);margin-bottom:.75rem}
+.hours-table{width:100%;border-collapse:collapse;font-size:13px}
+.hours-table tr td{padding:7px 0;border-bottom:1px solid var(--border)}
+.hours-table tr:last-child td{border-bottom:none}
+.hours-table td:first-child{color:var(--muted)}
+.hours-table td:last-child{text-align:right;font-weight:500;color:var(--navy)}
+.map-box{margin-top:1.5rem;border:1px solid var(--border);border-radius:3px;height:150px;background:var(--cream);display:flex;align-items:center;justify-content:center;gap:8px;color:var(--muted);font-size:13px}
+.map-box svg{color:var(--saffron)}
+
+.form-card{border:1px solid var(--border);border-top:3px solid var(--saffron);border-radius:3px;padding:2rem;background:#fff}
+.form-card h3{font-size:18px;color:var(--navy);margin-bottom:1.5rem;font-family:'Playfair Display',serif}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-field{margin-bottom:.1rem}
+.form-field label{display:block;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.form-field input,.form-field select,.form-field textarea{width:100%;padding:10px 13px;font-size:13px;font-family:'Inter',sans-serif;border:1px solid var(--border);border-radius:2px;background:#fff;color:var(--text);outline:none;transition:border-color .15s}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-color:var(--saffron)}
+.form-field textarea{height:96px;resize:vertical;line-height:1.6}
+.form-full{grid-column:1/-1}
+.form-submit{width:100%;padding:12px;background:var(--saffron);color:#fff;border:none;border-radius:2px;font-size:14px;font-weight:500;letter-spacing:.04em;cursor:pointer;transition:.2s;font-family:'Inter',sans-serif;margin-top:.75rem}
+.form-submit:hover{background:var(--saffron-mid)}
+.form-note{font-size:11px;color:var(--muted);text-align:center;margin-top:.75rem}
+
+/* ── FOOTER ── */
+footer{background:var(--navy);padding:3.5rem 0 1.5rem;border-top:4px solid var(--saffron)}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.footer-brand{font-family:'Playfair Display',serif;font-size:19px;color:#fff;margin-bottom:.3rem}
+.footer-brand span{color:var(--saffron)}
+.footer-tagline{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:.75rem}
+.footer-about{font-size:12px;color:rgba(255,255,255,.4);line-height:1.8}
+.footer-col h5{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--saffron);margin-bottom:.9rem;font-weight:500}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.45rem}
+.footer-col ul li a{font-size:13px;color:rgba(255,255,255,.5);cursor:pointer;transition:.15s}
+.footer-col ul li a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:1.25rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem}
+.footer-bottom p{font-size:12px;color:rgba(255,255,255,.3)}
+.footer-legal{display:flex;gap:1.5rem}
+.footer-legal a{font-size:12px;color:rgba(255,255,255,.3);cursor:pointer;transition:.15s}
+.footer-legal a:hover{color:rgba(255,255,255,.6)}
+
+/* Ashoka wheel accent in footer */
+.ashoka-accent{display:inline-block;font-size:22px;color:rgba(255,255,255,.08);margin-right:6px;vertical-align:middle}
+
+/* ── WHATSAPP FLOAT ── */
+.wa-float{position:fixed;bottom:28px;right:28px;z-index:999;display:flex;align-items:center;gap:10px;cursor:pointer}
+.wa-btn{width:54px;height:54px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,.4);transition:.2s}
+.wa-btn:hover{transform:scale(1.08);background:#1ebe5d}
+.wa-btn svg{color:#fff}
+.wa-label{background:#fff;border:1px solid var(--border);border-radius:3px;padding:6px 12px;font-size:12px;font-weight:500;color:var(--navy);box-shadow:0 2px 8px rgba(0,0,0,.1);white-space:nowrap;opacity:0;transform:translateX(8px);transition:.2s}
+.wa-float:hover .wa-label{opacity:1;transform:translateX(0)}
+
+/* ── FAQ ── */
+.faq-list{display:flex;flex-direction:column;gap:0;border:1px solid var(--border);border-radius:4px;overflow:hidden}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-item:last-child{border-bottom:none}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.25rem;cursor:pointer;background:#fff;transition:.15s;gap:1rem}
+.faq-q:hover{background:var(--saffron-light)}
+.faq-q span{font-size:14px;font-weight:500;color:var(--navy);line-height:1.4}
+.faq-icon{width:22px;height:22px;border-radius:50%;background:var(--saffron-light);border:1px solid #f0c4a8;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:.2s;font-size:16px;color:var(--saffron);font-weight:400;line-height:1}
+.faq-item.open .faq-icon{background:var(--saffron);color:#fff;transform:rotate(45deg)}
+.faq-a{display:none;padding:0 1.25rem 1.1rem;font-size:13px;color:var(--muted);line-height:1.75;background:#fff}
+.faq-item.open .faq-a{display:block}
+
+/* ── SOCIAL LINKS ── */
+.social-row{display:flex;gap:10px;margin-top:1.25rem}
+.social-btn{width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;transition:.15s;cursor:pointer}
+.social-btn:hover{background:var(--saffron);border-color:var(--saffron)}
+.social-btn svg{color:rgba(255,255,255,.55)}
+.social-btn:hover svg{color:#fff}
+
+/* ── FORM SUCCESS ── */
+.form-success{display:none;text-align:center;padding:2rem 1rem}
+.form-success .success-icon{width:54px;height:54px;border-radius:50%;background:#eaf3e8;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem}
+.form-success .success-icon svg{color:#2a6b25}
+.form-success h4{font-size:16px;color:var(--navy);margin-bottom:.4rem;font-family:'Playfair Display',serif}
+.form-success p{font-size:13px;color:var(--muted)}
+
+/* ── SCROLL ANIMATIONS ── */
+.fade-up{opacity:0;transform:translateY(24px);transition:opacity .55s ease,transform .55s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* ── MOBILE RESPONSIVE ── */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr}
+  .atty-panel{display:none}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .team-grid{grid-template-columns:1fr 1fr}
+  .testi-grid{grid-template-columns:1fr}
+  .process-grid{grid-template-columns:1fr 1fr}
+  .results-stats{grid-template-columns:1fr 1fr}
+  .about-grid{grid-template-columns:1fr}
+  .contact-layout{grid-template-columns:1fr}
+  .values-grid{grid-template-columns:1fr 1fr}
+  .practice-grid{grid-template-columns:1fr 1fr}
+  .section{padding:3rem 0}
+}
+@media(max-width:680px){
+  .navlinks{display:none}
+  .nav-cta{display:none}
+  .mobile-menu-btn{display:flex}
+  .topbar .topbar-item:last-child{display:none}
+  .footer-grid{grid-template-columns:1fr}
+  .process-grid{grid-template-columns:1fr}
+  .results-stats{grid-template-columns:1fr 1fr}
+  .practice-grid{grid-template-columns:1fr}
+  .team-grid{grid-template-columns:1fr 1fr}
+  .case-card{grid-template-columns:1fr}
+  .outcome-box{border-left:none;border-top:1px solid var(--border);padding-left:0;padding-top:1rem}
+  .form-grid{grid-template-columns:1fr}
+  .form-full{grid-column:1}
+  h1{font-size:24px}
+  h2{font-size:20px}
+  .container{padding:0 1rem}
+  .about-grid{grid-template-columns:1fr}
+  .section{padding:2.5rem 0}
+  .contact-layout{grid-template-columns:1fr}
+  .values-grid{grid-template-columns:1fr 1fr}
+  .section-head{margin-bottom:1.75rem}
+  .testi-grid{grid-template-columns:1fr}
+  .area-row{grid-template-columns:1fr}
+  .area-icon{display:none}
+}
+
+/* Mobile menu */
+.mobile-menu-btn{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;border:none;background:transparent}
+.mobile-menu-btn span{display:block;width:22px;height:2px;background:var(--navy);border-radius:2px;transition:.2s}
+.mobile-nav{display:none;position:absolute;top:68px;left:0;right:0;background:#fff;border-bottom:2px solid var(--saffron);z-index:99;box-shadow:0 4px 20px rgba(0,0,0,.08)}
+.mobile-nav.open{display:block}
+.mobile-nav a{display:block;padding:14px 2rem;font-size:14px;color:var(--navy);border-bottom:1px solid var(--border);cursor:pointer}
+.mobile-nav a:hover{background:var(--saffron-light);color:var(--saffron)}
+.mobile-nav .mobile-cta{background:var(--saffron);color:#fff;text-align:center;font-weight:500}
+.mobile-nav .mobile-cta:hover{background:var(--saffron-mid)}
+nav{position:relative}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <div class="topbar-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013.07 5.18 2 2 0 015.07 3h3a2 2 0 012 1.72c.127 1 .38 1.967.71 2.9a2 2 0 01-.45 2.11L9.09 11a16 16 0 006.86 6.86l1.27-1.27a2 2 0 012.11-.45c.933.33 1.9.575 2.9.71A2 2 0 0122 16.92z"/></svg>
+          +91 522 400 1234
+        </div>
+        <div class="topbar-divider"></div>
+        <div class="topbar-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@sharmaassociates.in
+        </div>
+      </div>
+      <div class="topbar-item">Mon – Sat &nbsp;|&nbsp; 9:00 am – 6:00 pm &nbsp;|&nbsp; Emergency: 24/7</div>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="container nav-inner">
+    <div class="brand-wrap">
+      <div class="brand-name">Sharma <span>&amp;</span> Associates</div>
+      <div class="brand-tagline">Advocates &amp; Legal Consultants</div>
+    </div>
+    <ul class="navlinks" id="navlinks">
+      <li><a onclick="goTo('home',this)" class="active">Home</a></li>
+      <li><a onclick="goTo('about',this)">About Us</a></li>
+      <li><a onclick="goTo('practice',this)">Practice Areas</a></li>
+      <li><a onclick="goTo('results',this)">Results</a></li>
+      <li><a onclick="goTo('contact',this)">Contact</a></li>
+    </ul>
+    <button class="nav-cta" onclick="goTo('contact',null)">Free Consultation</button>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a onclick="goTo('home',null);toggleMenu()">Home</a>
+    <a onclick="goTo('about',null);toggleMenu()">About Us</a>
+    <a onclick="goTo('practice',null);toggleMenu()">Practice Areas</a>
+    <a onclick="goTo('results',null);toggleMenu()">Results</a>
+    <a onclick="goTo('contact',null);toggleMenu()">Contact</a>
+    <a class="mobile-cta" onclick="goTo('contact',null);toggleMenu()">Free Consultation</a>
+  </div>
+</nav>
+
+<!-- ══════════ HOME ══════════ -->
+<div class="page active" id="page-home">
+
+  <div class="hero">
+    <div class="hero-accent"></div>
+    <div class="hero-border"></div>
+    <div class="container">
+      <div class="hero-inner">
+        <div>
+          <div class="hero-eyebrow">
+            <div class="dash"></div>
+            <span>Trusted Legal Counsel Since 1998 &nbsp;·&nbsp; Lucknow &amp; New Delhi</span>
+          </div>
+          <h1>Committed to <span class="accent">Justice.</span><br/>Dedicated to You.</h1>
+          <p class="hero-sub">With over two decades of courtroom experience, Sharma &amp; Associates delivers principled, result-oriented legal representation across all major practice areas.</p>
+          <div class="hero-btns">
+            <button class="btn btn-primary" onclick="goTo('contact',null)">Book Free Consultation</button>
+            <button class="btn btn-outline-white" onclick="goTo('results',null)">View Our Results</button>
+          </div>
+        </div>
+        <div class="atty-panel">
+          <div class="atty-init">RS</div>
+          <h3>Adv. Rajiv Sharma</h3>
+          <div class="atty-deg">LLB (Hons), LLM — Delhi University</div>
+          <div class="atty-title">Founder &amp; Senior Partner</div>
+          <div class="atty-rule"></div>
+          <div class="atty-stats">
+            <div class="a-stat"><div class="n">26+</div><div class="l">Years</div></div>
+            <div class="a-stat"><div class="n">98%</div><div class="l">Success</div></div>
+            <div class="a-stat"><div class="n">1,200+</div><div class="l">Clients</div></div>
+          </div>
+          <div class="verified">
+            <div class="verified-dot"></div>
+            Bar Council of India Registered
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="container trust-inner">
+      <div class="trust-item">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Bar Council Certified
+      </div>
+      <div class="trust-item">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        Top 100 Law Firms 2024
+      </div>
+      <div class="trust-item">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        4.9 / 5 Client Rating
+      </div>
+      <div class="trust-item">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        24-Hour Response Guarantee
+      </div>
+      <div class="trust-item">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+        Offices in Lucknow &amp; Delhi
+      </div>
+    </div>
+  </div>
+
+  <!-- PRACTICE AREAS -->
+  <div class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-label">Our Expertise</div>
+        <h2>Practice Areas</h2>
+        <p>Specialist advocates in each field — not generalists. Every matter is handled by a senior attorney who has argued that exact type of case many times before.</p>
+      </div>
+      <div class="practice-grid">
+        <div class="pcard" onclick="goTo('practice',null)">
+          <div class="pcard-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
+          <h4>Corporate Law</h4>
+          <p>Business formation, M&amp;A, contracts, commercial disputes</p>
+        </div>
+        <div class="pcard" onclick="goTo('practice',null)">
+          <div class="pcard-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <h4>Real Estate</h4>
+          <p>Property transactions, title disputes, RERA compliance</p>
+        </div>
+        <div class="pcard" onclick="goTo('practice',null)">
+          <div class="pcard-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <h4>Family Law</h4>
+          <p>Divorce, child custody, adoption, maintenance</p>
+        </div>
+        <div class="pcard" onclick="goTo('practice',null)">
+          <div class="pcard-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+          <h4>Criminal Defence</h4>
+          <p>Bail hearings, trial representation, High Court appeals</p>
+        </div>
+        <div class="pcard" onclick="goTo('practice',null)">
+          <div class="pcard-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+          <h4>Estate Planning</h4>
+          <p>Wills, trusts, probate, succession planning</p>
+        </div>
+        <div class="pcard" onclick="goTo('practice',null)">
+          <div class="pcard-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+          <h4>Personal Injury</h4>
+          <p>Accidents, medical negligence, insurance claims</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- PROCESS -->
+  <div class="section bg-cream">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-label">How We Work</div>
+        <h2>Our Process</h2>
+        <p>We make the legal process clear and manageable from your very first call.</p>
+      </div>
+      <div class="process-grid">
+        <div class="proc-step">
+          <div class="proc-num">01</div>
+          <h4>Free Consultation</h4>
+          <p>Tell us your situation. We listen and assess your legal position honestly — no obligation.</p>
+        </div>
+        <div class="proc-step">
+          <div class="proc-num">02</div>
+          <h4>Case Strategy</h4>
+          <p>We build a tailored strategy with clear options, timelines, and realistic expected outcomes.</p>
+        </div>
+        <div class="proc-step">
+          <div class="proc-num">03</div>
+          <h4>Active Representation</h4>
+          <p>Our advocates handle every filing, negotiation, and court appearance on your behalf.</p>
+        </div>
+        <div class="proc-step">
+          <div class="proc-num">04</div>
+          <h4>Resolution</h4>
+          <p>We pursue the best possible outcome and keep you fully informed at every stage.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- TESTIMONIALS -->
+  <div class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-label">Client Testimonials</div>
+        <h2>What Our Clients Say</h2>
+        <p>Trusted by individuals and businesses across Uttar Pradesh and beyond.</p>
+      </div>
+      <div class="testi-grid">
+        <div class="tcard">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"Adv. Sharma handled my custody case with compassion and precision. The outcome exceeded what I thought was possible. I am deeply grateful."</blockquote>
+          <div class="client-name">Priya Verma</div>
+          <div class="client-role">Family Law Client, Lucknow</div>
+        </div>
+        <div class="tcard">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"The corporate team at Sharma &amp; Associates saved our company from a very costly dispute. Highly professional, responsive, and thorough."</blockquote>
+          <div class="client-name">Suresh Agarwal</div>
+          <div class="client-role">Corporate Law Client, Kanpur</div>
+        </div>
+        <div class="tcard">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"After my accident, the firm secured far more compensation than I expected. They guided me through every step with patience and clarity."</blockquote>
+          <div class="client-name">Meena Gupta</div>
+          <div class="client-role">Personal Injury Client, Lucknow</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section bg-cream">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-label">Common Questions</div>
+        <h2>Frequently Asked Questions</h2>
+        <p>Answers to questions we hear most often from clients across Uttar Pradesh.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>What happens during a free consultation?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-a">During your free consultation, a senior advocate will listen to the facts of your matter, explain your legal position honestly, and outline the available options. There is no obligation to engage our services, and everything discussed is completely confidential.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>How much does it cost to hire Sharma &amp; Associates?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-a">Our fees vary by matter type and complexity. We provide a clear, written fee estimate before any work begins — no hidden charges. For personal injury cases, we typically operate on a no-win, no-fee basis. Contact us for a free initial assessment.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>How long does a typical case take to resolve?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-a">Timelines vary significantly by matter. Simple contracts or documentation can be completed in days. Civil disputes in district courts typically take 6–18 months. High Court appeals may take longer. We will give you a realistic estimate during your consultation based on the specifics of your case.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>Do you handle cases outside Lucknow?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-a">Yes. We practice across Uttar Pradesh in all District Courts, the Allahabad High Court (Lucknow Bench and Allahabad), and the Supreme Court of India. Our New Delhi office handles matters in Delhi courts and national tribunals. We also advise NRI clients internationally.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>Is my information kept confidential?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-a">Absolutely. All communications between you and our advocates are protected by advocate-client privilege under the Bar Council of India Rules. Your information will never be shared with any third party without your explicit consent.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>Can I get legal help in Hindi?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-a">हाँ, बिल्कुल। हमारे सभी अधिवक्ता हिंदी और अंग्रेज़ी दोनों में सेवाएं प्रदान करते हैं। हम यह सुनिश्चित करते हैं कि आप अपनी भाषा में अपनी कानूनी स्थिति को पूरी तरह समझें। Yes — all our advocates are fluent in Hindi and English, and we ensure every client fully understands their legal position in their preferred language.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CTA BAND -->
+  <div class="cta-band">
+    <div class="container">
+      <h2>Your First Consultation is Free</h2>
+      <p>No obligation. No pressure. Honest legal advice from a senior advocate.</p>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="goTo('contact',null)">Schedule a Consultation</button>
+        <button class="btn btn-outline-white" onclick="goTo('practice',null)">Explore Practice Areas</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════ ABOUT ══════════ -->
+<div class="page" id="page-about">
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="section-label">Who We Are</div>
+      <h1>A Firm Built on Integrity, Precision &amp; Advocacy</h1>
+      <p>Founded in Lucknow in 1998, Sharma &amp; Associates has grown into one of Uttar Pradesh's most trusted full-service law firms — combining the strength of a large practice with the personal attention every client deserves.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <div class="section-label">Our Story</div>
+          <h2>Twenty-Six Years of Principled Practice</h2>
+          <p>Adv. Rajiv Sharma founded this firm in Civil Lines, Lucknow in 1998 with two associates and a single guiding principle: that every client, regardless of their means, deserves honest counsel and vigorous representation.</p>
+          <p>Today, the firm employs 24 advocates across two offices — Lucknow and New Delhi — and has successfully resolved over 1,200 matters spanning civil, criminal, corporate, and family law.</p>
+          <p>We do not take more cases than we can handle well. Every client has a named senior advocate responsible for their matter from intake to resolution.</p>
+          <button class="btn btn-primary" style="margin-top:1.5rem" onclick="goTo('contact',null)">Speak to an Advocate</button>
+        </div>
+        <div class="sidebar-facts">
+          <div class="fact-chip"><div class="fn">1998</div><div class="fl">Year founded, Civil Lines, Lucknow</div></div>
+          <div class="fact-chip"><div class="fn">24</div><div class="fl">Advocates across 2 offices</div></div>
+          <div class="fact-chip"><div class="fn">1,200+</div><div class="fl">Cases successfully resolved</div></div>
+          <div class="fact-chip"><div class="fn">&#8377;480 Cr</div><div class="fl">Total damages recovered</div></div>
+          <div class="fact-chip"><div class="fn">98%</div><div class="fl">Overall success rate</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section bg-cream">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-label">Our Team</div>
+        <h2>Senior Advocates</h2>
+        <p>You will always work directly with a senior advocate — never just handed to a junior.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar av-saffron">RS</div>
+          <h4>Adv. Rajiv Sharma</h4>
+          <div class="t-role">Founder &amp; Senior Partner</div>
+          <div class="t-badge">Corporate &amp; Criminal</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar av-green">SA</div>
+          <h4>Adv. Sunita Agarwal</h4>
+          <div class="t-role">Partner</div>
+          <div class="t-badge">Family Law</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar av-navy">VM</div>
+          <h4>Adv. Vikram Mishra</h4>
+          <div class="t-role">Senior Associate</div>
+          <div class="t-badge">Real Estate</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar av-gold">NK</div>
+          <h4>Adv. Neha Kapoor</h4>
+          <div class="t-role">Associate</div>
+          <div class="t-badge">Estate Planning</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:4rem">
+      <div>
+        <div class="section-head">
+          <div class="section-label">Our Values</div>
+          <h2>What We Stand For</h2>
+        </div>
+        <div class="values-grid" style="grid-template-columns:1fr 1fr">
+          <div class="vcard">
+            <div class="v-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <h4>Integrity</h4>
+            <p>Honest counsel, even when it is not what clients want to hear.</p>
+          </div>
+          <div class="vcard">
+            <div class="v-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+            <h4>Transparency</h4>
+            <p>Clear fees, plain language, no billing surprises ever.</p>
+          </div>
+          <div class="vcard">
+            <div class="v-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            <h4>Accountability</h4>
+            <p>A named senior advocate responsible for your matter.</p>
+          </div>
+          <div class="vcard">
+            <div class="v-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <h4>Responsiveness</h4>
+            <p>Every inquiry answered within 24 hours, guaranteed.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="section-head">
+          <div class="section-label">Firm History</div>
+          <h2>Our Timeline</h2>
+        </div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-year">1998</div>
+            <h4>Firm Founded</h4>
+            <p>Adv. Rajiv Sharma opens the firm in Civil Lines, Lucknow with two associates.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2005</div>
+            <h4>Corporate Practice Expands</h4>
+            <p>Corporate &amp; commercial law division launched; recognized in National Law Review's top 50.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2013</div>
+            <h4>New Delhi Office Opens</h4>
+            <p>Second office inaugurated in Connaught Place; 500th client milestone achieved.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2024</div>
+            <h4>Top 100 Recognition</h4>
+            <p>Named in Top 100 Indian Law Firms; over 1,200 cases successfully resolved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════ PRACTICE AREAS ══════════ -->
+<div class="page" id="page-practice">
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="section-label">Expertise</div>
+      <h1>Practice Areas</h1>
+      <p>Specialist advocates in each discipline. Every case is handled by someone who has argued that exact type of matter many times before in Indian courts.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="area-list">
+        <div class="area-row">
+          <div class="area-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
+          <div>
+            <h3>Corporate Law</h3>
+            <p class="area-desc">We advise businesses from incorporation through growth and exit — contracts, shareholder disputes, regulatory compliance, and M&amp;A transactions. We act for startups, MSMEs, and listed companies across all major sectors in India.</p>
+            <div class="tag-row"><span class="tag">Business Formation</span><span class="tag">Contracts</span><span class="tag">Mergers &amp; Acquisitions</span><span class="tag">Shareholder Disputes</span><span class="tag">Regulatory Compliance</span></div>
+          </div>
+        </div>
+        <div class="area-row">
+          <div class="area-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <div>
+            <h3>Real Estate Law</h3>
+            <p class="area-desc">From residential conveyancing to large commercial transactions, our team handles title searches, lease negotiations, property disputes, and builder-buyer disagreements. We also advise on RERA compliance and development agreements under Indian property law.</p>
+            <div class="tag-row"><span class="tag">Conveyancing</span><span class="tag">Title Disputes</span><span class="tag">Lease Agreements</span><span class="tag">RERA Compliance</span><span class="tag">Builder Disputes</span></div>
+          </div>
+        </div>
+        <div class="area-row">
+          <div class="area-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <div>
+            <h3>Family Law</h3>
+            <p class="area-desc">Sensitive matters handled with the discretion and empathy they deserve. We represent clients under the Hindu Marriage Act, Special Marriage Act, and Muslim Personal Law — covering divorce, custody, maintenance, adoption, and domestic violence proceedings.</p>
+            <div class="tag-row"><span class="tag">Divorce</span><span class="tag">Child Custody</span><span class="tag">Adoption</span><span class="tag">Maintenance</span><span class="tag">Domestic Violence</span></div>
+          </div>
+        </div>
+        <div class="area-row">
+          <div class="area-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+          <div>
+            <h3>Criminal Defence</h3>
+            <p class="area-desc">Robust representation at every stage — from police questioning and bail hearings to trial, sentencing, and appeals. We defend clients in Sessions Courts, Allahabad High Court, and the Supreme Court of India, with a strong record in acquittals and sentence reductions.</p>
+            <div class="tag-row"><span class="tag">Bail Hearings</span><span class="tag">Trial Defence</span><span class="tag">High Court Appeals</span><span class="tag">Supreme Court</span><span class="tag">Anticipatory Bail</span></div>
+          </div>
+        </div>
+        <div class="area-row">
+          <div class="area-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+          <div>
+            <h3>Estate Planning</h3>
+            <p class="area-desc">We help families protect their assets across generations — drafting wills and trusts, managing probate, advising on succession planning, and handling NRI cross-border estate matters under Indian Succession Act and Hindu Succession Act.</p>
+            <div class="tag-row"><span class="tag">Wills &amp; Trusts</span><span class="tag">Probate</span><span class="tag">Succession Planning</span><span class="tag">NRI Estate Matters</span><span class="tag">Asset Protection</span></div>
+          </div>
+        </div>
+        <div class="area-row">
+          <div class="area-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+          <div>
+            <h3>Personal Injury</h3>
+            <p class="area-desc">We pursue maximum compensation for clients injured through negligence — road accidents under Motor Vehicles Act, workplace injuries, medical negligence, and product liability. We operate on a no-win, no-fee basis for most personal injury cases.</p>
+            <div class="tag-row"><span class="tag">Road Accidents</span><span class="tag">Workplace Injury</span><span class="tag">Medical Negligence</span><span class="tag">Product Liability</span><span class="tag">No-Win No-Fee</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-band">
+    <div class="container">
+      <h2>Not Sure Which Area Applies to You?</h2>
+      <p>Speak to one of our advocates — we will guide you at no charge.</p>
+      <div class="btn-row"><button class="btn btn-primary" onclick="goTo('contact',null)">Get Free Advice</button></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════ RESULTS ══════════ -->
+<div class="page" id="page-results">
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="section-label">Track Record</div>
+      <h1>Our Results</h1>
+      <p>We measure our success by outcomes for clients — not by the number of cases we accept. A representative sample of what we have achieved.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="results-stats">
+        <div class="r-stat"><div class="rn">98%</div><div class="rl">Overall success rate</div></div>
+        <div class="r-stat"><div class="rn">1,200+</div><div class="rl">Cases resolved</div></div>
+        <div class="r-stat"><div class="rn">&#8377;480 Cr</div><div class="rl">Total damages recovered</div></div>
+        <div class="r-stat"><div class="rn">26 yrs</div><div class="rl">Years in practice</div></div>
+      </div>
+
+      <div class="section-head">
+        <div class="section-label">Notable Cases</div>
+        <h2>Selected Outcomes</h2>
+        <p>All cases are anonymised or reported with client consent.</p>
+      </div>
+
+      <div class="case-list">
+        <div class="case-card">
+          <div>
+            <div class="case-tag">Corporate Law</div>
+            <h4>Corporate Fraud Defence — Manufacturing Sector</h4>
+            <p>Represented a mid-size manufacturer in Kanpur accused of financial misreporting. Charges dropped at pre-trial stage after our team identified material procedural errors by the prosecution.</p>
+          </div>
+          <div class="outcome-box"><div class="out-label">Outcome</div><div class="out-badge">Charges Dropped</div></div>
+        </div>
+        <div class="case-card">
+          <div>
+            <div class="case-tag">Personal Injury</div>
+            <h4>Road Accident — Serious Injury, Lucknow</h4>
+            <p>Client sustained serious injuries in a commercial vehicle collision on NH-27. Secured full medical costs, loss of earnings, pain &amp; suffering, and future care in a single settlement.</p>
+          </div>
+          <div class="outcome-box"><div class="out-label">Recovered</div><div class="out-val">&#8377;1.4 Cr</div><div class="out-badge">Settled</div></div>
+        </div>
+        <div class="case-card">
+          <div>
+            <div class="case-tag">Real Estate</div>
+            <h4>Commercial Title Fraud — Gomti Nagar, Lucknow</h4>
+            <p>Represented a buyer defrauded through a falsified title chain. Obtained injunction and full restitution within 11 months of filing before the Civil Court.</p>
+          </div>
+          <div class="outcome-box"><div class="out-label">Recovered</div><div class="out-val">&#8377;3.8 Cr</div><div class="out-badge">Won at Trial</div></div>
+        </div>
+        <div class="case-card">
+          <div>
+            <div class="case-tag">Family Law</div>
+            <h4>Child Custody — Cross-City Relocation Dispute</h4>
+            <p>Secured primary custody and favourable visitation terms for our client in a contested relocation matter involving two minor children and competing schooling plans.</p>
+          </div>
+          <div class="outcome-box"><div class="out-label">Outcome</div><div class="out-badge">Custody Granted</div></div>
+        </div>
+        <div class="case-card">
+          <div>
+            <div class="case-tag">Personal Injury</div>
+            <h4>Medical Negligence — Surgical Error, Private Hospital</h4>
+            <p>Client suffered permanent disability following an avoidable surgical error. Successfully settled against both the hospital and the operating surgeon before the State Consumer Commission.</p>
+          </div>
+          <div class="outcome-box"><div class="out-label">Recovered</div><div class="out-val">&#8377;2.1 Cr</div><div class="out-badge">Settled</div></div>
+        </div>
+        <div class="case-card">
+          <div>
+            <div class="case-tag">Criminal Defence</div>
+            <h4>Wrongful Arrest — Narcotics Case, Allahabad</h4>
+            <p>Client wrongfully arrested on fabricated narcotics charges. Secured bail within 48 hours and full acquittal at Sessions Court after exposing chain of custody failures.</p>
+          </div>
+          <div class="outcome-box"><div class="out-label">Outcome</div><div class="out-badge">Acquitted</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════ CONTACT ══════════ -->
+<div class="page" id="page-contact">
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="section-label">Get in Touch</div>
+      <h1>Contact Us</h1>
+      <p>Your first consultation is free. A senior advocate will respond within one business day.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-info">
+          <div class="section-label">Office Details</div>
+          <h2>Sharma &amp; Associates</h2>
+          <p class="intro">We have offices in Lucknow and New Delhi. Walk-in appointments are welcome during office hours, or call ahead to guarantee time with a specific advocate.</p>
+          <div class="info-rows">
+            <div class="info-row">
+              <div class="info-row-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013.07 5.18 2 2 0 015.07 3h3a2 2 0 012 1.72c.13 1 .38 1.97.71 2.9a2 2 0 01-.45 2.11L9.09 11a16 16 0 006.86 6.86l1.27-1.27a2 2 0 012.11-.45c.93.33 1.9.57 2.9.71A2 2 0 0122 16.92z"/></svg></div>
+              <div><div class="val">+91 522 400 1234</div><div class="lbl">Main office, Lucknow</div></div>
+            </div>
+            <div class="info-row">
+              <div class="info-row-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              <div><div class="val">info@sharmaassociates.in</div><div class="lbl">Replies within 24 hours</div></div>
+            </div>
+            <div class="info-row">
+              <div class="info-row-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <div><div class="val">14 Civil Lines, Lucknow</div><div class="lbl">Uttar Pradesh 226 001</div></div>
+            </div>
+          </div>
+          <div class="hours-label">Office Hours</div>
+          <table class="hours-table">
+            <tr><td>Monday – Friday</td><td>9:00 am – 6:00 pm</td></tr>
+            <tr><td>Saturday</td><td>10:00 am – 2:00 pm</td></tr>
+            <tr><td>Sunday</td><td>Closed</td></tr>
+            <tr><td>Emergencies</td><td>24 / 7 On Call</td></tr>
+          </table>
+          <div class="map-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            14 Civil Lines, Lucknow — View on Google Maps
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h3>Send Us a Message</h3>
+          <div class="form-grid">
+            <div class="form-field"><label>First Name</label><input type="text" placeholder="Your first name"/></div>
+            <div class="form-field"><label>Last Name</label><input type="text" placeholder="Your last name"/></div>
+            <div class="form-field form-full"><label>Email Address</label><input type="email" placeholder="you@example.com"/></div>
+            <div class="form-field form-full"><label>Phone Number</label><input type="tel" placeholder="+91 98765 43210"/></div>
+            <div class="form-field form-full">
+              <label>Practice Area</label>
+              <select>
+                <option value="">Select a practice area…</option>
+                <option>Corporate Law</option>
+                <option>Real Estate</option>
+                <option>Family Law</option>
+                <option>Criminal Defence</option>
+                <option>Estate Planning</option>
+                <option>Personal Injury</option>
+                <option>Other / Not Sure</option>
+              </select>
+            </div>
+            <div class="form-field form-full"><label>Your Message</label><textarea placeholder="Briefly describe your legal matter and the outcome you are hoping for…"></textarea></div>
+          </div>
+          <button class="form-submit" onclick="submitForm(event)">Send Message</button>
+          <p class="form-note">All information is protected by advocate-client confidentiality under the Bar Council of India Rules.</p>
+          <div class="form-success" id="formSuccess">
+            <div class="success-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h4>Message Sent Successfully</h4>
+            <p>Thank you for reaching out. A senior advocate will contact you within one business day.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Sharma <span>&amp;</span> Associates</div>
+        <div class="footer-tagline">Advocates &amp; Legal Consultants</div>
+        <p class="footer-about">Full-service law firm in Lucknow and New Delhi. Trusted by over 1,200 clients since 1998. Bar Council of India registered. Practising in all courts across Uttar Pradesh.</p>
+        <div class="social-row">
+          <div class="social-btn" title="LinkedIn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
+          <div class="social-btn" title="Facebook">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </div>
+          <div class="social-btn" title="WhatsApp">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+          </div>
+          <div class="social-btn" title="Instagram">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Pages</h5>
+        <ul>
+          <li><a onclick="goTo('home',null)">Home</a></li>
+          <li><a onclick="goTo('about',null)">About Us</a></li>
+          <li><a onclick="goTo('practice',null)">Practice Areas</a></li>
+          <li><a onclick="goTo('results',null)">Results</a></li>
+          <li><a onclick="goTo('contact',null)">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Practice Areas</h5>
+        <ul>
+          <li><a onclick="goTo('practice',null)">Corporate Law</a></li>
+          <li><a onclick="goTo('practice',null)">Real Estate</a></li>
+          <li><a onclick="goTo('practice',null)">Family Law</a></li>
+          <li><a onclick="goTo('practice',null)">Criminal Defence</a></li>
+          <li><a onclick="goTo('practice',null)">Estate Planning</a></li>
+          <li><a onclick="goTo('practice',null)">Personal Injury</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a>+91 522 400 1234</a></li>
+          <li><a>info@sharmaassociates.in</a></li>
+          <li><a>14 Civil Lines, Lucknow</a></li>
+          <li><a>Uttar Pradesh 226 001</a></li>
+          <li><a>Mon–Fri: 9 am – 6 pm</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Sharma &amp; Associates. All rights reserved. Bar Council of India Registered.</p>
+      <div class="footer-legal">
+        <a>Privacy Policy</a>
+        <a>Terms of Use</a>
+        <a>Disclaimer</a>
+        <a>Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<div class="wa-float">
+  <div class="wa-label">Chat with us on WhatsApp</div>
+  <div class="wa-btn" onclick="window.open('https://wa.me/915224001234','_blank')" title="WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </div>
+</div>
+
+<script>
+/* ── Navigation ── */
+function goTo(page,linkEl){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+page).classList.add('active');
+  document.querySelectorAll('.navlinks a').forEach(a=>a.classList.remove('active'));
+  const map={home:0,about:1,practice:2,results:3,contact:4};
+  const links=document.querySelectorAll('.navlinks a');
+  if(linkEl)linkEl.classList.add('active');
+  else if(links[map[page]])links[map[page]].classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+  // Re-trigger animations for new page
+  setTimeout(observeFadeUps,100);
+}
+
+/* ── Mobile menu ── */
+function toggleMenu(){
+  const nav=document.getElementById('mobileNav');
+  nav.classList.toggle('open');
+}
+
+/* ── FAQ accordion ── */
+function toggleFaq(el){
+  const item=el.parentElement;
+  const isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
+  if(!isOpen)item.classList.add('open');
+}
+
+/* ── Form submit ── */
+function submitForm(e){
+  e.preventDefault();
+  const card=document.querySelector('.form-card');
+  const grid=card.querySelector('.form-grid');
+  const btn=card.querySelector('.form-submit');
+  const note=card.querySelector('.form-note');
+  const success=document.getElementById('formSuccess');
+  grid.style.display='none';
+  btn.style.display='none';
+  note.style.display='none';
+  success.style.display='block';
+}
+
+/* ── Scroll fade-up animations ── */
+function observeFadeUps(){
+  const els=document.querySelectorAll('.page.active .fade-up');
+  const obs=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
+  },{threshold:0.12});
+  els.forEach(el=>{obs.observe(el);});
+}
+
+/* ── Add fade-up to key elements dynamically ── */
+function addFadeUps(){
+  const targets=[
+    '.pcard','.proc-step','.tcard','.team-card','.vcard',
+    '.r-stat','.case-card','.area-row','.fact-chip','.tl-item','.faq-item'
+  ];
+  targets.forEach(sel=>{
+    document.querySelectorAll(sel).forEach((el,i)=>{
+      el.classList.add('fade-up');
+      el.style.transitionDelay=(i*0.06)+'s';
+    });
+  });
+}
+
+/* ── Init ── */
+document.addEventListener('DOMContentLoaded',()=>{
+  addFadeUps();
+  observeFadeUps();
+});
+</script>
+</body>
+</html>
+<!-- This marker should not exist - appending to wrong place -->
